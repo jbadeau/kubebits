@@ -1,6 +1,8 @@
 # kubebits
 
-A [Backstage](https://backstage.io/) inspired, Kubernetes native software catalogue with the following features
+A [Backstage](https://backstage.io/) inspired, Kubernetes native software catalogue.
+
+Kubits aims to provide the following features
 
 - Backstage resource compatability
 - RBAC authorization
