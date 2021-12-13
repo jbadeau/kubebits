@@ -1,0 +1,600 @@
+{
+  openapi: 3.0.0
+  info: class
+  Info {
+  title: Component
+  description: null
+  termsOfService: null
+  contact: null
+  license: null
+  version: 1.0.0
+}
+externalDocs: null
+servers: [
+class Server {
+url: /
+description: null
+variables: null
+}
+]
+security: null
+tags: null
+paths: class Paths {
+{}
+}
+components: class Components {
+schemas: {
+ComponentV1alpha1=class ComposedSchema {
+class Schema {
+type: null
+format: null
+$ref: null
+description: A Component describes a software component. It is typically intimately linked to the source code that constitutes the component, and should be what a developer may regard a "unit of software", usually with a distinct deployable or linkable artifact.
+title: null
+multipleOf: null
+maximum: null
+exclusiveMaximum: null
+minimum: null
+exclusiveMinimum: null
+maxLength: null
+minLength: null
+pattern: null
+maxItems: null
+minItems: null
+uniqueItems: null
+maxProperties: null
+minProperties: null
+required: null
+not: null
+properties: null
+additionalProperties: null
+nullable: null
+readOnly: null
+writeOnly: null
+example: [{"apiVersion": "backstage.io/v1alpha1", "kind": "Component", "metadata": {"name": "LoremService", "description": "Creates Lorems like a pro.","labels": {"product_name": "Random value Generator"}, "annotations":{"docs": "https://github.com/..../tree/develop/doc"}}, "spec": {"type": "service", "lifecycle": "production", "owner":"tools"}}]
+externalDocs: null
+deprecated: null
+discriminator: null
+xml: null
+}
+allOf: [
+class Schema {
+type: null
+format: null
+$ref: ../Entity.schema.yaml#/components/schemas/Entity
+description: null
+title: null
+multipleOf: null
+maximum: null
+exclusiveMaximum: null
+minimum: null
+exclusiveMinimum: null
+maxLength: null
+minLength: null
+pattern: null
+maxItems: null
+minItems: null
+uniqueItems: null
+maxProperties: null
+minProperties: null
+required: null
+not: null
+properties: null
+additionalProperties: null
+nullable: null
+readOnly: null
+writeOnly: null
+example: null
+externalDocs: null
+deprecated: null
+discriminator: null
+xml: null
+}, class ObjectSchema {
+class Schema {
+type: object
+format: null
+$ref: null
+description: null
+title: null
+multipleOf: null
+maximum: null
+exclusiveMaximum: null
+minimum: null
+exclusiveMinimum: null
+maxLength: null
+minLength: null
+pattern: null
+maxItems: null
+minItems: null
+uniqueItems: null
+maxProperties: null
+minProperties: null
+required: [spec]
+not: null
+properties: {apiVersion=class Schema {
+type: string
+format: null
+$ref: null
+description: null
+title: null
+multipleOf: null
+maximum: null
+exclusiveMaximum: null
+minimum: null
+exclusiveMinimum: null
+maxLength: null
+minLength: null
+pattern: null
+maxItems: null
+minItems: null
+uniqueItems: null
+maxProperties: null
+minProperties: null
+required: null
+not: null
+properties: null
+additionalProperties: null
+nullable: null
+readOnly: null
+writeOnly: null
+example: null
+externalDocs: null
+deprecated: null
+discriminator: null
+xml: null
+}, kind=class Schema {
+type: string
+format: null
+$ref: null
+description: null
+title: null
+multipleOf: null
+maximum: null
+exclusiveMaximum: null
+minimum: null
+exclusiveMinimum: null
+maxLength: null
+minLength: null
+pattern: null
+maxItems: null
+minItems: null
+uniqueItems: null
+maxProperties: null
+minProperties: null
+required: null
+not: null
+properties: null
+additionalProperties: null
+nullable: null
+readOnly: null
+writeOnly: null
+example: null
+externalDocs: null
+deprecated: null
+discriminator: null
+xml: null
+}, spec=class ObjectSchema {
+class Schema {
+type: object
+format: null
+$ref: null
+description: null
+title: null
+multipleOf: null
+maximum: null
+exclusiveMaximum: null
+minimum: null
+exclusiveMinimum: null
+maxLength: null
+minLength: null
+pattern: null
+maxItems: null
+minItems: null
+uniqueItems: null
+maxProperties: null
+minProperties: null
+required: [lifecycle, owner, type]
+not: null
+properties: {type=class StringSchema {
+class Schema {
+type: string
+format: null
+$ref: null
+description: The type of component.
+title: null
+multipleOf: null
+maximum: null
+exclusiveMaximum: null
+minimum: null
+exclusiveMinimum: null
+maxLength: null
+minLength: 1
+pattern: null
+maxItems: null
+minItems: null
+uniqueItems: null
+maxProperties: null
+minProperties: null
+required: null
+not: null
+properties: null
+additionalProperties: null
+nullable: null
+readOnly: null
+writeOnly: null
+example: ["service", "website", "library"]
+externalDocs: null
+deprecated: null
+discriminator: null
+xml: null
+}
+}, lifecycle=class StringSchema {
+class Schema {
+type: string
+format: null
+$ref: null
+description: The lifecycle state of the component.
+title: null
+multipleOf: null
+maximum: null
+exclusiveMaximum: null
+minimum: null
+exclusiveMinimum: null
+maxLength: null
+minLength: 1
+pattern: null
+maxItems: null
+minItems: null
+uniqueItems: null
+maxProperties: null
+minProperties: null
+required: null
+not: null
+properties: null
+additionalProperties: null
+nullable: null
+readOnly: null
+writeOnly: null
+example: ["experimental", "production", "deprecated"]
+externalDocs: null
+deprecated: null
+discriminator: null
+xml: null
+}
+}, owner=class StringSchema {
+class Schema {
+type: string
+format: null
+$ref: null
+description: An entity reference to the owner of the component.
+title: null
+multipleOf: null
+maximum: null
+exclusiveMaximum: null
+minimum: null
+exclusiveMinimum: null
+maxLength: null
+minLength: 1
+pattern: null
+maxItems: null
+minItems: null
+uniqueItems: null
+maxProperties: null
+minProperties: null
+required: null
+not: null
+properties: null
+additionalProperties: null
+nullable: null
+readOnly: null
+writeOnly: null
+example: ["artist-relations-team", "user:john.johnson"]
+externalDocs: null
+deprecated: null
+discriminator: null
+xml: null
+}
+}, system=class StringSchema {
+class Schema {
+type: string
+format: null
+$ref: null
+description: An entity reference to the system that the component belongs to.
+title: null
+multipleOf: null
+maximum: null
+exclusiveMaximum: null
+minimum: null
+exclusiveMinimum: null
+maxLength: null
+minLength: 1
+pattern: null
+maxItems: null
+minItems: null
+uniqueItems: null
+maxProperties: null
+minProperties: null
+required: null
+not: null
+properties: null
+additionalProperties: null
+nullable: null
+readOnly: null
+writeOnly: null
+example: null
+externalDocs: null
+deprecated: null
+discriminator: null
+xml: null
+}
+}, subcomponentOf=class StringSchema {
+class Schema {
+type: string
+format: null
+$ref: null
+description: An entity reference to another component of which the component is a part.
+title: null
+multipleOf: null
+maximum: null
+exclusiveMaximum: null
+minimum: null
+exclusiveMinimum: null
+maxLength: null
+minLength: 1
+pattern: null
+maxItems: null
+minItems: null
+uniqueItems: null
+maxProperties: null
+minProperties: null
+required: null
+not: null
+properties: null
+additionalProperties: null
+nullable: null
+readOnly: null
+writeOnly: null
+example: null
+externalDocs: null
+deprecated: null
+discriminator: null
+xml: null
+}
+}, providesApis=class ArraySchema {
+class Schema {
+type: array
+format: null
+$ref: null
+description: An array of entity references to the APIs that are provided by the component.
+title: null
+multipleOf: null
+maximum: null
+exclusiveMaximum: null
+minimum: null
+exclusiveMinimum: null
+maxLength: null
+minLength: null
+pattern: null
+maxItems: null
+minItems: null
+uniqueItems: null
+maxProperties: null
+minProperties: null
+required: null
+not: null
+properties: null
+additionalProperties: null
+nullable: null
+readOnly: null
+writeOnly: null
+example: null
+externalDocs: null
+deprecated: null
+discriminator: null
+xml: null
+}
+items: class StringSchema {
+class Schema {
+type: string
+format: null
+$ref: null
+description: null
+title: null
+multipleOf: null
+maximum: null
+exclusiveMaximum: null
+minimum: null
+exclusiveMinimum: null
+maxLength: null
+minLength: 1
+pattern: null
+maxItems: null
+minItems: null
+uniqueItems: null
+maxProperties: null
+minProperties: null
+required: null
+not: null
+properties: null
+additionalProperties: null
+nullable: null
+readOnly: null
+writeOnly: null
+example: null
+externalDocs: null
+deprecated: null
+discriminator: null
+xml: null
+}
+}
+}, consumesApis=class ArraySchema {
+class Schema {
+type: array
+format: null
+$ref: null
+description: An array of entity references to the APIs that are consumed by the component.
+title: null
+multipleOf: null
+maximum: null
+exclusiveMaximum: null
+minimum: null
+exclusiveMinimum: null
+maxLength: null
+minLength: null
+pattern: null
+maxItems: null
+minItems: null
+uniqueItems: null
+maxProperties: null
+minProperties: null
+required: null
+not: null
+properties: null
+additionalProperties: null
+nullable: null
+readOnly: null
+writeOnly: null
+example: null
+externalDocs: null
+deprecated: null
+discriminator: null
+xml: null
+}
+items: class StringSchema {
+class Schema {
+type: string
+format: null
+$ref: null
+description: null
+title: null
+multipleOf: null
+maximum: null
+exclusiveMaximum: null
+minimum: null
+exclusiveMinimum: null
+maxLength: null
+minLength: 1
+pattern: null
+maxItems: null
+minItems: null
+uniqueItems: null
+maxProperties: null
+minProperties: null
+required: null
+not: null
+properties: null
+additionalProperties: null
+nullable: null
+readOnly: null
+writeOnly: null
+example: null
+externalDocs: null
+deprecated: null
+discriminator: null
+xml: null
+}
+}
+}, dependsOn=class ArraySchema {
+class Schema {
+type: array
+format: null
+$ref: null
+description: An array of references to other entities that the component depends on to function.
+title: null
+multipleOf: null
+maximum: null
+exclusiveMaximum: null
+minimum: null
+exclusiveMinimum: null
+maxLength: null
+minLength: null
+pattern: null
+maxItems: null
+minItems: null
+uniqueItems: null
+maxProperties: null
+minProperties: null
+required: null
+not: null
+properties: null
+additionalProperties: null
+nullable: null
+readOnly: null
+writeOnly: null
+example: null
+externalDocs: null
+deprecated: null
+discriminator: null
+xml: null
+}
+items: class StringSchema {
+class Schema {
+type: string
+format: null
+$ref: null
+description: null
+title: null
+multipleOf: null
+maximum: null
+exclusiveMaximum: null
+minimum: null
+exclusiveMinimum: null
+maxLength: null
+minLength: 1
+pattern: null
+maxItems: null
+minItems: null
+uniqueItems: null
+maxProperties: null
+minProperties: null
+required: null
+not: null
+properties: null
+additionalProperties: null
+nullable: null
+readOnly: null
+writeOnly: null
+example: null
+externalDocs: null
+deprecated: null
+discriminator: null
+xml: null
+}
+}
+}}
+additionalProperties: null
+nullable: null
+readOnly: null
+writeOnly: null
+example: null
+externalDocs: null
+deprecated: null
+discriminator: null
+xml: null
+}
+}}
+additionalProperties: null
+nullable: null
+readOnly: null
+writeOnly: null
+example: null
+externalDocs: null
+deprecated: null
+discriminator: null
+xml: null
+}
+}
+]
+anyOf: null
+oneOf: null
+}}
+responses: null
+parameters: null
+examples: null
+requestBodies: null
+headers: null
+securitySchemes: null
+links: null
+callbacks: null
+}
+}

@@ -1,0 +1,72 @@
+openapi: 3.0.0
+info:
+  title: EntityEnvelope
+  version: 1.0.0
+paths:
+  {}
+components:
+  schemas:
+    EntityEnvelope:
+      description: The envelope skeleton parts of an entity - whatever is necessary to be
+        able to give it a ref and pass to further validation / policy checking.
+      example:
+      #examples:
+        - apiVersion: backstage.io/v1alpha1
+          kind: Component
+          metadata:
+            name: LoremService
+      type: object
+      required:
+        - apiVersion
+        - kind
+        - metadata
+      additionalProperties: true
+      properties:
+        apiVersion:
+          type: string
+          description: The version of specification format for this particular entity that
+            this is written against.
+          minLength: 1
+          example:
+            #examples:
+            - backstage.io/v1alpha1
+            - my-company.net/v1
+            - '1.0'
+        kind:
+          type: string
+          description: The high level entity type being described.
+          minLength: 1
+          example:
+            #examples:
+            - API
+            - Component
+            - Domain
+            - Group
+            - Location
+            - Resource
+            - System
+            - Template
+            - User
+        metadata:
+          type: object
+          required:
+            - name
+          additionalProperties: true
+          properties:
+            name:
+              type: string
+              description: The name of the entity. Must be unique within the catalog at
+                any given point in time, for any given namespace + kind pair.
+              example:
+              #examples:
+                - metadata-proxy
+              minLength: 1
+            namespace:
+              type: string
+              description: The namespace that the entity belongs to.
+              default: default
+              example:
+              #examples:
+                - default
+                - admin
+              minLength: 1
