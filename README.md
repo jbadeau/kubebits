@@ -6,7 +6,7 @@ Kubebits aims to provide the following:
 
 - All in one K3S & PostgreSQL image
 - CRD based catalog store
-- Container based plugins
+- CRD based plugins
 - Operator based management
 - RBAC
 - Micro frontend architecture
