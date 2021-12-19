@@ -1,26 +1,21 @@
 # kubebits
 
-A [Backstage](https://backstage.io/) compatible, Kubernetes native software catalogue.
+A Kubernetes native, [Backstage](https://backstage.io/) compatible, DevOps portal.
 
-Kubits aims to provide the following features
+Kubebits aims to provide the following:
 
-- Backstage resource compatability
-- RBAC authorization
-- Micro frontend architecture
-- Event bus for cross plug-in communication
-- Java 17 backend
-- CRD based
-- Plugin registry
-- Independent deployment
-- Tekton based templates
+- All in one K3S & PostgreSQL image
+- CRD based catalog store
+- Container based plugins
 - Operator based management
+- RBAC
+- Micro frontend architecture
+- Context awarenesss
 
-## Development
+## Prerequisites
 
-#### prerequisites*
+- Earthly
+- Docker/Podman
 
-- Java 17
-- npm swagger-cli
-
-#### Generate dereferenced json schema
+Generate dereferenced json schema
 `swagger-cli bundle -r .\Component.v1alpha1.schema.yaml -o output.yaml -t yaml`
